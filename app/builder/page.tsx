@@ -1,20 +1,12 @@
 'use client';
 import '@/app/styles/builder.css';
-import { Metadata } from 'next';
 import { useState } from 'react';
-import Footer from '../components/footer';
 import ResumeImage from '../components/resume';
 import { defaultInfo } from '../data/data';
 import InputInfo from './user.input';
 
-export const metadata: Metadata = {
-	title: 'Build a Resume',
-};
 export default function Page() {
 	const [info, setInfo] = useState(defaultInfo);
-	const [jobs, setJobs] = useState(0);
-
-	const handleSetJobs = () => setJobs((prevJob) => jobs + 1);
 	const handleSetDegree = () =>
 		setInfo((prevInfo) => ({
 			...prevInfo,
@@ -50,8 +42,6 @@ export default function Page() {
 					<InputInfo
 						info={info}
 						setInfo={setInfo}
-						jobs={jobs}
-						handleSetJobs={handleSetJobs}
 						education={info.education}
 						experience={info.experience}
 						handleSetDegree={handleSetDegree}

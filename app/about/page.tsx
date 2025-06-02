@@ -1,11 +1,6 @@
 'use client';
-import { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '../components/footer';
-
-export const metadata: Metadata = {
-	title: 'About',
-};
 
 export default function AboutPage() {
 	return (
@@ -81,9 +76,9 @@ export default function AboutPage() {
 								</div>
 								<p className="text-gray-300 leading-relaxed">
 									Hours spent wrestling with Word templates. Broken formatting after every edit.
-									Beautiful designs that look terrible when exported. We've all been there – the
-									endless cycle of resume frustration that steals time from what really matters: job
-									searching.
+									Beautiful designs that look terrible when exported. We&apos;ve all been there –
+									the endless cycle of resume frustration that steals time from what really matters:
+									job searching.
 								</p>
 							</div>
 
@@ -136,8 +131,8 @@ export default function AboutPage() {
 							</div>
 							<h3 className="text-xl font-bold mb-4">Beautiful by Default</h3>
 							<p className="text-gray-300">
-								Everyone deserves a resume that looks professionally designed. We've done the hard
-								work of creating stunning templates so you can focus on your content, not your
+								Everyone deserves a resume that looks professionally designed. We&apos;ve done the
+								hard work of creating stunning templates so you can focus on your content, not your
 								design skills.
 							</p>
 						</div>
@@ -148,9 +143,9 @@ export default function AboutPage() {
 							</div>
 							<h3 className="text-xl font-bold mb-4">Accessible to All</h3>
 							<p className="text-gray-300">
-								Professional resume tools shouldn't be a luxury. We're committed to keeping
-								ResumeFast accessible and affordable, because everyone deserves a shot at their
-								dream job.
+								Professional resume tools shouldn&apos;t be a luxury. We&apos;re committed to
+								keeping ResumeFast accessible and affordable, because everyone deserves a shot at
+								their dream job.
 							</p>
 						</div>
 					</div>
@@ -175,10 +170,10 @@ export default function AboutPage() {
 							</h2>
 
 							<p className="text-lg text-gray-300 leading-relaxed mb-8">
-								We're just getting started. Our roadmap includes AI-powered content optimization,
-								industry-specific templates, real-time collaboration features, and intelligent job
-								matching. ResumeFast isn't just a resume builder – it's your career advancement
-								partner.
+								We&apos;re just getting started. Our roadmap includes AI-powered content
+								optimization, industry-specific templates, real-time collaboration features, and
+								intelligent job matching. ResumeFast isn&apos;t just a resume builder – it&apos;s
+								your career advancement partner.
 							</p>
 
 							<div className="flex flex-col sm:flex-row gap-4 justify-center">

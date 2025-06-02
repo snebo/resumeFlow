@@ -13,9 +13,6 @@ const geistMono = Geist_Mono({
 	subsets: ['latin'],
 });
 
-// app/layout.tsx - Root Layout Metadata
-import type { Metadata } from 'next';
-
 export const metadata: Metadata = {
 	metadataBase: new URL('https://resumefast.vercel.app'),
 	title: {
