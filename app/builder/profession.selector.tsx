@@ -11,7 +11,7 @@ export default function ProfessionalSelector({ setInfo, info }: professionalProp
 			<label className="w-full text-md font-semibold">
 				Select a Profession:
 				<select
-					className="border border-gray-200 rounded-md w-4/5 p-1 block mb-2 focus:shadow bg-white font-light text-gray-600"
+					className="rounded-md w-4/5 p-1 block mb-2 focus:shadow font-light text-gray-100  bg-white/10 border border-cyan-400/3"
 					id="profession-select"
 					value={info.skill}
 					onChange={(event) =>
@@ -20,9 +20,9 @@ export default function ProfessionalSelector({ setInfo, info }: professionalProp
 						})
 					}
 				>
-					<option value="">--Please choose an option--</option>
+					<option value="">--Select a Profession--</option>
 					{Object.keys(Professions).map((profession) => (
-						<option key={profession} value={profession}>
+						<option key={profession} value={profession} className="text-black">
 							{profession}
 						</option>
 					))}

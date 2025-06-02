@@ -13,7 +13,7 @@ export default function ResumeImage({ information }: any) {
 		));
 	};
 	return (
-		<div className="border border-gray-300  bg-white shadow-2xl w-full px-6">
+		<div className="border border-gray-300 rounded-md bg-white shadow-3xl w-full px-6 text-black">
 			<div className="flex flex-nowrap gap-2 px-6 pt-6 min-h-34 pb-3">
 				<div className="basicInfo text-2xl w-1/2 flex flex-col justify-center uppercase">
 					{information.firstName} <span className="block">{information.lastName}</span>

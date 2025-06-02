@@ -13,11 +13,11 @@ export default function InputInfo({
 	handleSetExperience,
 }: any) {
 	return (
-		<div className=" flex flex-wrap gap-2 flex-col w-full py-6 px-12">
+		<div className=" flex flex-wrap gap-2 flex-col w-full py-6 px-12 text-purple-400">
 			<label className="w-full text-md font-semibold">
 				First Name
 				<input
-					className="border border-gray-200 rounded-md w-4/5 p-1 block mb-2 focus:shadow bg-white font-light text-gray-600 "
+					className="rounded-md w-4/5 p-1 block mb-2 focus:shadow font-light text-gray-100  bg-white/10 border border-cyan-400/3"
 					type="text"
 					value={info.firstName}
 					placeholder="John"
@@ -29,7 +29,7 @@ export default function InputInfo({
 			<label className="w-full text-md font-semibold">
 				Last Name
 				<input
-					className="border border-gray-200 rounded-md w-4/5 p-1 block mb-2 focus:shadow bg-white font-light text-gray-600"
+					className="rounded-md w-4/5 p-1 block mb-2 focus:shadow font-light text-gray-100  bg-white/10 border border-cyan-400/3"
 					type="text"
 					value={info.lastName}
 					placeholder="Doe"
@@ -41,7 +41,7 @@ export default function InputInfo({
 			<label className="w-full text-md font-semibold">
 				Job Title
 				<input
-					className="border border-gray-200 rounded-md w-4/5 p-1 block mb-2 focus:shadow bg-white font-light text-gray-600"
+					className="rounded-md w-4/5 p-1 block mb-2 focus:shadow font-light text-gray-100  bg-white/10 border border-cyan-400/3"
 					type="text"
 					value={info.jobTitle}
 					placeholder="Position currently held or applying for"
@@ -53,7 +53,7 @@ export default function InputInfo({
 			<label className="w-full text-md font-semibold">
 				Summary
 				<textarea
-					className="border border-gray-200 rounded-md w-4/5 h-25 p-1 block mb-2 focus:shadow bg-white font-light text-gray-600"
+					className="rounded-md w-4/5 p-1 block mb-2 focus:shadow font-light text-gray-100  bg-white/10 border border-cyan-400/3 h-25"
 					value={info.summary}
 					placeholder="Software Engineer"
 					onChange={(event) =>

@@ -12,7 +12,7 @@ export default function AddDetailButton({ text, setter }: buttonType) {
 			>
 				<div className="text-white text-2xl">+</div>
 			</div>
-			<p>{text}</p>
+			<p className="text-amber-400 font-semibold">{text}</p>
 		</div>
 	);
 }

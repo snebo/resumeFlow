@@ -38,7 +38,7 @@ export default function JobDescription({ index, info, setInfo }: JobDescriptionP
 			<label className="w-full text-md font-semibold">
 				Job Title:
 				<input
-					className="border border-gray-200 rounded-md w-4/5 p-1 block mb-2 focus:shadow bg-white font-light text-gray-600"
+					className="rounded-md w-4/5 p-1 block mb-2 focus:shadow font-light text-gray-100  bg-white/10 border border-cyan-400/3"
 					type="text"
 					value={info.jobTitle}
 					placeholder="Software Engineer"
@@ -57,7 +57,7 @@ export default function JobDescription({ index, info, setInfo }: JobDescriptionP
 			<label className="w-full text-md font-semibold">
 				Company:
 				<input
-					className="border border-gray-200 rounded-md w-4/5 p-1 block mb-2 focus:shadow bg-white font-light text-gray-600"
+					className="rounded-md w-4/5 p-1 block mb-2 focus:shadow font-light text-gray-100  bg-white/10 border border-cyan-400/3"
 					type="text"
 					value={info.companyName}
 					placeholder="Google"
@@ -79,7 +79,7 @@ export default function JobDescription({ index, info, setInfo }: JobDescriptionP
 					{/* TODO: convert the dates to string */}
 					<span>From: </span>
 					<input
-						className="border border-gray-200 rounded-md p-1 mb-2 focus:shadow bg-white font-light text-gray-600"
+						className="rounded-md w-4/5 p-1 block mb-2 focus:shadow font-light text-gray-100  bg-white/10 border border-cyan-400/3"
 						type="date"
 						value={info.from ? info.from.toISOString().split('T')[0] : ''}
 						placeholder="2020"
@@ -96,7 +96,7 @@ export default function JobDescription({ index, info, setInfo }: JobDescriptionP
 					/>
 					<span>To: </span>
 					<input
-						className="border border-gray-200 rounded-md p-1 mb-2 focus:shadow bg-white font-light text-gray-600"
+						className="rounded-md w-4/5 p-1 block mb-2 focus:shadow font-light text-gray-100  bg-white/10 border border-cyan-400/3"
 						type="date"
 						value={info.to ? info.to.toISOString().split('T')[0] : ''}
 						placeholder="2020"
@@ -116,7 +116,7 @@ export default function JobDescription({ index, info, setInfo }: JobDescriptionP
 			<label className="w-full text-md font-semibold">
 				Job Description:
 				<textarea
-					className="border border-gray-200 h-32 rounded-md w-4/5 p-1 block mb-2 focus:shadow bg-white font-light text-gray-600"
+					className="rounded-md w-4/5 p-1 block mb-2 focus:shadow font-light text-gray-100  bg-white/10 border border-cyan-400/3 h-32"
 					value={info.jobDescription}
 					placeholder="Responsible for writing code. And stuff."
 					onChange={(event) =>

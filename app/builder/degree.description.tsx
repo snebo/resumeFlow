@@ -29,7 +29,7 @@ export default function Degree({ degreeDetail, index, setInfo }: Degree) {
 			<label className="w-full text-md font-semibold">
 				Institution:
 				<input
-					className="border border-gray-200 rounded-md w-4/5 p-1 block mb-2 focus:shadow bg-white font-light text-gray-600"
+					className="rounded-md w-4/5 p-1 block mb-2 focus:shadow font-light text-gray-100  bg-white/10 border border-cyan-400/3"
 					type="text"
 					value={degreeDetail.instituteName}
 					placeholder="Enter Institution Name"
@@ -48,7 +48,7 @@ export default function Degree({ degreeDetail, index, setInfo }: Degree) {
 			<label className="w-full text-md font-semibold">
 				Course:
 				<input
-					className="border border-gray-200 rounded-md w-4/5 p-1 block mb-2 focus:shadow bg-white font-light text-gray-600"
+					className="rounded-md w-4/5 p-1 block mb-2 focus:shadow font-light text-gray-100  bg-white/10 border border-cyan-400/3"
 					type="text"
 					value={degreeDetail.course}
 					placeholder="Enter Institution Name"
@@ -67,7 +67,7 @@ export default function Degree({ degreeDetail, index, setInfo }: Degree) {
 			<label className="w-full text-md font-semibold">
 				GPA:
 				<input
-					className="border border-gray-200 rounded-md w-[80px] p-1 block mb-2 focus:shadow bg-white font-light text-gray-600"
+					className="rounded-md w-4/5 p-1 block mb-2 focus:shadow font-light text-gray-100  bg-white/10 border border-cyan-400/3"
 					type="text"
 					value={degreeDetail.gpa || ''}
 					placeholder="Enter GPA"
@@ -86,7 +86,7 @@ export default function Degree({ degreeDetail, index, setInfo }: Degree) {
 			<label className="w-full text-md font-semibold">
 				Years of Degree:
 				<input
-					className="border border-gray-200 rounded-md w-[50px] p-1 block mb-2 focus:shadow bg-white font-light text-gray-600"
+					className="rounded-md w-4/5 p-1 block mb-2 focus:shadow font-light text-gray-100  bg-white/10 border border-cyan-400/3"
 					type="number"
 					value={degreeDetail.degreeYears}
 					placeholder="Enter Years"
