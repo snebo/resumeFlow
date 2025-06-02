@@ -1,11 +1,15 @@
 'use client';
 import '@/app/styles/builder.css';
+import { Metadata } from 'next';
 import { useState } from 'react';
 import Footer from '../components/footer';
 import ResumeImage from '../components/resume';
 import { defaultInfo } from '../data/data';
 import InputInfo from './user.input';
 
+export const metadata: Metadata = {
+	title: 'Build a Resume',
+};
 export default function Page() {
 	const [info, setInfo] = useState(defaultInfo);
 	const [jobs, setJobs] = useState(0);

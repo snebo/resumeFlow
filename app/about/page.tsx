@@ -1,6 +1,11 @@
 'use client';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '../components/footer';
+
+export const metadata: Metadata = {
+	title: 'About',
+};
 
 export default function AboutPage() {
 	return (
