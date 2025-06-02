@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ResumeFlow
+
+A simple resume builder built with Next.js that lets you create professional resumes without the formatting headaches.
+
+## Features
+
+- **Real-time preview** - See your resume update as you type
+- **Clean templates** - Professional designs that actually look good
+- **Easy form interface** - Just fill out the fields, no complex editing
+- **PDF export** - Download when you're done
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+git clone https://github.com/snebo/resumeflow.git
+cd resumeflow
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js 14
+- React
+- Tailwind CSS
+- TypeScript
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+├── builder/          # Main resume builder
+├── about/           # About page
+├── components/      # Reusable components
+└── page.tsx        # Landing page
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Why I Built This
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+I got tired of fighting with Word templates and broken formatting every time I needed to update my resume. Figured there had to be a better way - turns out there wasn't, so I built one.
 
-## Deploy on Vercel
+The idea is simple: fill out a form, watch your resume build in real-time, download it when you're happy. No design skills required.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Roadmap
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [ ] More template options
+- [ ] AI content suggestions
+- [ ] Job-specific optimization
+- [ ] Better mobile experience
+
+## Contributing
+
+Found a bug or have an idea? Open an issue or submit a PR. This is a side project but I'm always open to improvements.
+
+## License
+
+MIT - feel free to use this for whatever you want.
