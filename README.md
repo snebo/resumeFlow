@@ -1,4 +1,4 @@
-# ResumeFlow
+# ResumeFast
 
 A simple resume builder built with Next.js that lets you create professional resumes without the formatting headaches.
 
@@ -12,8 +12,8 @@ A simple resume builder built with Next.js that lets you create professional res
 ## Getting Started
 
 ```bash
-git clone https://github.com/snebo/resumeflow.git
-cd resumeflow
+git clone https://github.com/snebo/resumefast.git
+cd resumefast
 npm install
 npm run dev
 ```

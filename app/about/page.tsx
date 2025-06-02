@@ -20,7 +20,7 @@ export default function AboutPage() {
 							</div>
 							<h1 className="text-5xl md:text-7xl font-bold">
 								<span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-									ResumeFlow
+									ResumeFast
 								</span>
 							</h1>
 						</div>
@@ -67,7 +67,7 @@ export default function AboutPage() {
 				<div className="container mx-auto">
 					<div className="max-w-5xl mx-auto">
 						<div className="text-center mb-16">
-							<h2 className="text-4xl md:text-5xl font-bold mb-6">The Story Behind ResumeFlow</h2>
+							<h2 className="text-4xl md:text-5xl font-bold mb-6">The Story Behind ResumeFast</h2>
 							<p className="text-xl text-gray-300">Born from frustration, built with passion</p>
 						</div>
 
@@ -96,7 +96,7 @@ export default function AboutPage() {
 								</div>
 								<p className="text-gray-300 leading-relaxed">
 									What if creating a resume could be as simple as filling out a form? What if you
-									could see your changes instantly, without any formatting headaches? ResumeFlow was
+									could see your changes instantly, without any formatting headaches? ResumeFast was
 									born from this vision – a tool that just works, beautifully and effortlessly.
 								</p>
 							</div>
@@ -149,7 +149,7 @@ export default function AboutPage() {
 							<h3 className="text-xl font-bold mb-4">Accessible to All</h3>
 							<p className="text-gray-300">
 								Professional resume tools shouldn't be a luxury. We're committed to keeping
-								ResumeFlow accessible and affordable, because everyone deserves a shot at their
+								ResumeFast accessible and affordable, because everyone deserves a shot at their
 								dream job.
 							</p>
 						</div>
@@ -177,7 +177,7 @@ export default function AboutPage() {
 							<p className="text-lg text-gray-300 leading-relaxed mb-8">
 								We're just getting started. Our roadmap includes AI-powered content optimization,
 								industry-specific templates, real-time collaboration features, and intelligent job
-								matching. ResumeFlow isn't just a resume builder – it's your career advancement
+								matching. ResumeFast isn't just a resume builder – it's your career advancement
 								partner.
 							</p>
 
@@ -206,7 +206,7 @@ export default function AboutPage() {
 							by Snebo
 						</h2>
 						<p className="text-lg text-gray-300 mb-8">
-							ResumeFlow is crafted by a developers who understand the job search struggle
+							ResumeFast is crafted by a developers who understand the job search struggle
 							firsthand. I&apos;ve been where you are, and I&apos;m here to make the journey
 							smoother for everyone who comes after.
 						</p>

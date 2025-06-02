@@ -96,7 +96,7 @@ export default function LandingPage() {
 						<h2 className="text-4xl md:text-5xl font-bold mb-6">
 							Why Choose{' '}
 							<span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-								ResumeFlow
+								ResumeFast
 							</span>
 						</h2>
 						<p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -230,7 +230,7 @@ export default function LandingPage() {
 						Ready to Build Your Perfect Resume?
 					</h2>
 					<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-						Join thousands of job seekers who've already created stunning resumes with ResumeFlow
+						Join thousands of job seekers who've already created stunning resumes with ResumeFast
 					</p>
 					<Link
 						href={'/builder'}
@@ -253,10 +253,10 @@ export default function LandingPage() {
 								<span className="text-white font-bold text-lg">R</span>
 							</div>
 							<span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-								ResumeFlow
+								ResumeFast
 							</span>
 						</div>
-						<div className="text-gray-400 text-sm">© 2025 ResumeFlow. All rights reserved.</div>
+						<div className="text-gray-400 text-sm">© 2025 ResumeFast. All rights reserved.</div>
 					</div>
 				</div>
 			</footer>

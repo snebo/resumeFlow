@@ -17,10 +17,10 @@ const geistMono = Geist_Mono({
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-	metadataBase: new URL('https://resumeflow.vercel.app'),
+	metadataBase: new URL('https://resumefast.vercel.app'),
 	title: {
-		default: 'ResumeFlow - Free Professional Resume Builder Online',
-		template: '%s | ResumeFlow',
+		default: 'ResumeFast - Free Professional Resume Builder Online',
+		template: '%s | ResumeFast',
 	},
 	description:
 		'Create professional resumes in minutes with our free online resume builder. Real-time preview, ATS-friendly templates, and instant PDF download. No sign-up required.',
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
 		'resume templates',
 		'PDF resume generator',
 	],
-	authors: [{ name: 'ResumeFlow Team' }],
-	creator: 'ResumeFlow',
-	publisher: 'ResumeFlow',
+	authors: [{ name: 'ResumeFast Team' }],
+	creator: 'ResumeFast',
+	publisher: 'ResumeFast',
 	formatDetection: {
 		email: false,
 		address: false,
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: 'website',
 		locale: 'en_US',
-		url: 'https://resumeflow.vercel.app',
-		siteName: 'ResumeFlow',
-		title: 'ResumeFlow - Free Professional Resume Builder Online',
+		url: 'https://resumefast.vercel.app',
+		siteName: 'ResumeFast',
+		title: 'ResumeFast - Free Professional Resume Builder Online',
 		description:
 			'Create professional resumes in minutes with our free online resume builder. Real-time preview, ATS-friendly templates, and instant PDF download.',
 		images: [
@@ -57,17 +57,17 @@ export const metadata: Metadata = {
 				url: '/thumbnail_18_9.png',
 				width: 1200,
 				height: 630,
-				alt: 'ResumeFlow - Professional Resume Builder',
+				alt: 'ResumeFast - Professional Resume Builder',
 			},
 		],
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: 'ResumeFlow - Free Professional Resume Builder Online',
+		title: 'ResumeFast - Free Professional Resume Builder Online',
 		description:
 			'Create professional resumes in minutes with our free online resume builder. Real-time preview, ATS-friendly templates, and instant PDF download.',
 		images: ['/thumbnail_18_9.png'],
-		creator: '@resumeflow',
+		creator: '@resumefast',
 	},
 	robots: {
 		index: true,
