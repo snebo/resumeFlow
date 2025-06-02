@@ -1,17 +1,19 @@
 import AddDetailButton from './add.detail.button';
 import Degree from './degree.description';
 import JobDescription from './job.description.template';
+import ProfessionalSelector from './profession.selector';
 
 export default function InputInfo({
 	info,
 	setInfo,
 	jobs,
-	handleSetJobs,
 	education,
+	experience,
 	handleSetDegree,
+	handleSetExperience,
 }: any) {
 	return (
-		<div className=" flex flex-wrap gap-2 flex-col w-full py-6 px-3">
+		<div className=" flex flex-wrap gap-2 flex-col w-full py-6 px-12">
 			<label className="w-full text-md font-semibold">
 				First Name
 				<input
@@ -20,7 +22,7 @@ export default function InputInfo({
 					value={info.firstName}
 					placeholder="John"
 					onChange={(event) =>
-						setInfo((prevInfo) => ({ ...prevInfo, firstName: event.target.value }))
+						setInfo((prevInfo: any) => ({ ...prevInfo, firstName: event.target.value }))
 					}
 				/>
 			</label>
@@ -32,7 +34,7 @@ export default function InputInfo({
 					value={info.lastName}
 					placeholder="Doe"
 					onChange={(event) =>
-						setInfo((prevInfo) => ({ ...prevInfo, lastName: event.target.value }))
+						setInfo((prevInfo: any) => ({ ...prevInfo, lastName: event.target.value }))
 					}
 				/>
 			</label>
@@ -44,7 +46,7 @@ export default function InputInfo({
 					value={info.jobTitle}
 					placeholder="Position currently held or applying for"
 					onChange={(event) =>
-						setInfo((prevInfo) => ({ ...prevInfo, jobTitle: event.target.value }))
+						setInfo((prevInfo: any) => ({ ...prevInfo, jobTitle: event.target.value }))
 					}
 				/>
 			</label>
@@ -55,20 +57,23 @@ export default function InputInfo({
 					value={info.summary}
 					placeholder="Software Engineer"
 					onChange={(event) =>
-						setInfo((prevInfo) => ({ ...prevInfo, summary: event.target.value }))
+						setInfo((prevInfo: any) => ({ ...prevInfo, summary: event.target.value }))
 					}
 				/>
 			</label>
-			{console.log('education: ', education)}
+			<ProfessionalSelector info={info} setInfo={setInfo} />
 			{education.map((degree: any, i: number) => (
-				<Degree degreeDetail={degree} index={i} setInfo={setInfo} />
+				<Degree degreeDetail={degree} key={i} index={i} setInfo={setInfo} />
 			))}
 			<AddDetailButton text="Add Education" setter={handleSetDegree} />
 
-			{Array.from({ length: jobs }).map((_, i) => (
+			{/* {Array.from({ length: jobs }).map((_, i) => (
 				<JobDescription key={i} index={i} info={info} setInfo={setInfo} />
+			))} */}
+			{experience.map((position: any, i: number) => (
+				<JobDescription index={i} info={position} setInfo={setInfo} key={i} />
 			))}
-			<AddDetailButton text="Add Job" setter={handleSetJobs} />
+			<AddDetailButton text="Add Job" setter={handleSetExperience} />
 		</div>
 	);
 }

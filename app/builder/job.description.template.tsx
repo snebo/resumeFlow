@@ -1,28 +1,74 @@
-import { defaultInfo } from '../data/data';
+import { ifError } from 'assert';
+import { defaultInfo, Experience } from '../data/data';
+import InputInfo from './user.input';
 
 type JobDescriptionProps = {
+	info: {
+		companyName: string;
+		from: Date;
+		to: Date;
+		jobTitle: string;
+		location?: string;
+		jobDescription: string;
+	};
 	index: number;
-	info: typeof defaultInfo;
-	setInfo: React.Dispatch<React.SetStateAction<typeof defaultInfo>>;
+	setInfo: any;
 };
 
 export default function JobDescription({ index, info, setInfo }: JobDescriptionProps) {
-	const job = info.experience[index] || ['', '', '', ''];
+	const handleRemove = () => {
+		setInfo((prevInfo: { experience: JobDescriptionProps[] }) => {
+			const updated = prevInfo.experience.filter((_: any, i: number) => i !== index);
+			return { ...prevInfo, experience: updated };
+		});
+	};
 	return (
 		<>
 			<hr />
+			<div className="flex justify-between items-center mb-2">
+				<h2 className="text-lg font-semibold">Job #{index + 1}</h2>
+				<button
+					type="button"
+					onClick={handleRemove}
+					className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors"
+				>
+					Remove
+				</button>
+			</div>
 			<label className="w-full text-md font-semibold">
 				Job Title:
 				<input
 					className="border border-gray-200 rounded-md w-4/5 p-1 block mb-2 focus:shadow bg-white font-light text-gray-600"
 					type="text"
-					value={job[0]}
+					value={info.jobTitle}
 					placeholder="Software Engineer"
 					onChange={(event) =>
-						setInfo((prevInfo) => {
-							const updated = [...prevInfo.experience];
-							updated[index] = [event.target.value, job[1], job[2], job[3]];
-							return { ...prevInfo, experience: updated };
+						setInfo((prevInfo: { experience: any }) => {
+							const updatedExperience = [...prevInfo.experience];
+							updatedExperience[index] = {
+								...updatedExperience[index],
+								jobTitle: event.target.value,
+							};
+							return { ...prevInfo, experience: updatedExperience };
+						})
+					}
+				/>
+			</label>
+			<label className="w-full text-md font-semibold">
+				Company:
+				<input
+					className="border border-gray-200 rounded-md w-4/5 p-1 block mb-2 focus:shadow bg-white font-light text-gray-600"
+					type="text"
+					value={info.companyName}
+					placeholder="Google"
+					onChange={(event) =>
+						setInfo((prevInfo: { experience: any }) => {
+							const updatedExperience = [...prevInfo.experience];
+							updatedExperience[index] = {
+								...updatedExperience[index],
+								companyName: event.target.value,
+							};
+							return { ...prevInfo, experience: updatedExperience };
 						})
 					}
 				/>
@@ -35,13 +81,16 @@ export default function JobDescription({ index, info, setInfo }: JobDescriptionP
 					<input
 						className="border border-gray-200 rounded-md p-1 mb-2 focus:shadow bg-white font-light text-gray-600"
 						type="date"
-						value={job[1]}
-						placeholder="2020-01-01"
+						value={info.from ? info.from.toISOString().split('T')[0] : ''}
+						placeholder="2020"
 						onChange={(event) =>
-							setInfo((prevInfo) => {
-								const updated = [...prevInfo.experience];
-								updated[index] = [job[0], event.target.value, job[2], job[3]];
-								return { ...prevInfo, experience: updated };
+							setInfo((prevInfo: { experience: any }) => {
+								const updatedExperience = [...prevInfo.experience];
+								updatedExperience[index] = {
+									...updatedExperience[index],
+									from: new Date(event.target.value),
+								};
+								return { ...prevInfo, experience: updatedExperience };
 							})
 						}
 					/>
@@ -49,13 +98,16 @@ export default function JobDescription({ index, info, setInfo }: JobDescriptionP
 					<input
 						className="border border-gray-200 rounded-md p-1 mb-2 focus:shadow bg-white font-light text-gray-600"
 						type="date"
-						value={job[1]}
-						placeholder="2020-01-01"
+						value={info.to ? info.to.toISOString().split('T')[0] : ''}
+						placeholder="2020"
 						onChange={(event) =>
-							setInfo((prevInfo) => {
-								const updated = [...prevInfo.experience];
-								updated[index] = [job[0], job[1], event.target.value, job[3]];
-								return { ...prevInfo, experience: updated };
+							setInfo((prevInfo: { experience: any }) => {
+								const updatedExperience = [...prevInfo.experience];
+								updatedExperience[index] = {
+									...updatedExperience[index],
+									to: new Date(event.target.value),
+								};
+								return { ...prevInfo, experience: updatedExperience };
 							})
 						}
 					/>
@@ -65,13 +117,16 @@ export default function JobDescription({ index, info, setInfo }: JobDescriptionP
 				Job Description:
 				<textarea
 					className="border border-gray-200 h-32 rounded-md w-4/5 p-1 block mb-2 focus:shadow bg-white font-light text-gray-600"
-					value={job[2]}
+					value={info.jobDescription}
 					placeholder="Responsible for writing code. And stuff."
 					onChange={(event) =>
-						setInfo((prevInfo) => {
-							const updated = [...prevInfo.experience];
-							updated[index] = [job[0], job[1], job[2], event.target.value];
-							return { ...prevInfo, experience: updated };
+						setInfo((prevInfo: { experience: any }) => {
+							const updatedExperience = [...prevInfo.experience];
+							updatedExperience[index] = {
+								...updatedExperience[index],
+								jobDescription: event.target.value,
+							};
+							return { ...prevInfo, experience: updatedExperience };
 						})
 					}
 				/>

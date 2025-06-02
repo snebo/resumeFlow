@@ -1,13 +1,13 @@
 type Degree = {
-	degreeDetail: { instituteName: string; degreeYears: number; gpa?: string };
+	degreeDetail: { instituteName: string; degreeYears: number; gpa?: string; course: string };
 	index: number;
 	setInfo: any;
 };
 
 export default function Degree({ degreeDetail, index, setInfo }: Degree) {
 	const handleRemove = () => {
-		setInfo((prevInfo) => {
-			const updatedEducation = prevInfo.education.filter((_, i) => i !== index);
+		setInfo((prevInfo: { education: any[] }) => {
+			const updatedEducation = prevInfo.education.filter((_: any, i: number) => i !== index);
 			return { ...prevInfo, education: updatedEducation };
 		});
 	};
@@ -34,11 +34,30 @@ export default function Degree({ degreeDetail, index, setInfo }: Degree) {
 					value={degreeDetail.instituteName}
 					placeholder="Enter Institution Name"
 					onChange={(event) =>
-						setInfo((prevInfo) => {
+						setInfo((prevInfo: { education: any }) => {
 							const updatedEducation = [...prevInfo.education];
 							updatedEducation[index] = {
 								...updatedEducation[index],
 								instituteName: event.target.value,
+							};
+							return { ...prevInfo, education: updatedEducation };
+						})
+					}
+				/>
+			</label>
+			<label className="w-full text-md font-semibold">
+				Course:
+				<input
+					className="border border-gray-200 rounded-md w-4/5 p-1 block mb-2 focus:shadow bg-white font-light text-gray-600"
+					type="text"
+					value={degreeDetail.course}
+					placeholder="Enter Institution Name"
+					onChange={(event) =>
+						setInfo((prevInfo: { education: any }) => {
+							const updatedEducation = [...prevInfo.education];
+							updatedEducation[index] = {
+								...updatedEducation[index],
+								course: event.target.value,
 							};
 							return { ...prevInfo, education: updatedEducation };
 						})
@@ -53,7 +72,7 @@ export default function Degree({ degreeDetail, index, setInfo }: Degree) {
 					value={degreeDetail.gpa || ''}
 					placeholder="Enter GPA"
 					onChange={(event) =>
-						setInfo((prevInfo) => {
+						setInfo((prevInfo: { education: any }) => {
 							const updatedEducation = [...prevInfo.education];
 							updatedEducation[index] = {
 								...updatedEducation[index],
@@ -67,12 +86,12 @@ export default function Degree({ degreeDetail, index, setInfo }: Degree) {
 			<label className="w-full text-md font-semibold">
 				Years of Degree:
 				<input
-					className="border border-gray-200 rounded-md w-[80px] p-1 block mb-2 focus:shadow bg-white font-light text-gray-600"
+					className="border border-gray-200 rounded-md w-[50px] p-1 block mb-2 focus:shadow bg-white font-light text-gray-600"
 					type="number"
 					value={degreeDetail.degreeYears}
 					placeholder="Enter Years"
 					onChange={(event) =>
-						setInfo((prevInfo) => {
+						setInfo((prevInfo: { education: any }) => {
 							const updatedEducation = [...prevInfo.education];
 							updatedEducation[index] = {
 								...updatedEducation[index],
